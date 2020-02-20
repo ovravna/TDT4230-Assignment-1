@@ -34,6 +34,7 @@ SceneNode* rootNode;
 SceneNode* boxNode;
 SceneNode* ballNode;
 SceneNode* padNode;
+SceneNode* lightNode;
 
 double ballRadius = 3.0f;
 
@@ -124,9 +125,11 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     padNode  = createSceneNode();
     ballNode = createSceneNode();
 
+
     rootNode->children.push_back(boxNode);
     rootNode->children.push_back(padNode);
     rootNode->children.push_back(ballNode);
+
 
     boxNode->vertexArrayObjectID = boxVAO;
     boxNode->VAOIndexCount = box.indices.size();
@@ -138,8 +141,10 @@ void initGame(GLFWwindow* window, CommandLineOptions gameOptions) {
     ballNode->VAOIndexCount = sphere.indices.size();
 
 
+	/* lightNode = createSceneNode(); */
+	/* ballNode->children.push_back(lightNode); */
 
-
+	/* lightNode->nodeType = POINT_LIGHT; */ 
 
 
     getTimeDeltaSeconds();

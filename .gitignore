@@ -36,3 +36,15 @@
 !/build/.emptydirectory
 
 /.vscode/*
+
+.clangd/
+
+CMakeFiles/
+
+CMakeCache.txt
+
+Makefile
+
+cmake_install.cmake
+
+glowbox
